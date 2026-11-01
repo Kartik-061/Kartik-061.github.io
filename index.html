@@ -1,376 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kartikya Motwani — Full-Stack AI Developer &amp; Cybersecurity</title>
-<meta name="description" content="Kartikya Motwani — full-stack AI developer and cybersecurity student. Alpha Terminal: a statistically-validated NSE trading platform. BookIQ: a RAG book intelligence platform.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forge Terminal</title>
 <style>
-  :root {
-    --bg: #0E1420;
-    --panel: #161D2B;
-    --panel-border: #262F42;
-    --text: #E8E6DE;
-    --muted: #8B94A6;
-    --accent: #D9A441;
-    --reject: #B5555A;
-    --serif: 'Newsreader', serif;
-    --sans: 'IBM Plex Sans', sans-serif;
-    --mono: 'IBM Plex Mono', monospace;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: 17px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  ::selection { background: var(--accent); color: #0E1420; }
-
-  a { color: inherit; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-
-  .wrap {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  /* ---------- Hero ---------- */
-
-  .hero {
-    padding: 96px 0 64px;
-    border-bottom: 1px solid var(--panel-border);
-  }
-
-  .hero-name {
-    font-family: var(--serif);
-    font-size: clamp(2.4rem, 6vw, 3.4rem);
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    margin-bottom: 10px;
-  }
-
-  .hero-role {
-    color: var(--muted);
-    font-size: 1.05rem;
-    max-width: 46ch;
-    margin-bottom: 40px;
-  }
-
-  .evidence {
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: 4px;
-    padding: 22px 24px;
-  }
-
-  .evidence-lead {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-bottom: 14px;
-  }
-
-  .evidence-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 7px 0;
-    border-top: 1px solid var(--panel-border);
-    font-family: var(--mono);
-    font-size: 0.9rem;
-  }
-  .evidence-row:first-of-type { border-top: none; }
-
-  .evidence-strategy { color: var(--text); }
-  .evidence-p { color: var(--muted); }
-  .evidence-verdict.pass { color: var(--accent); }
-  .evidence-verdict.fail { color: var(--reject); opacity: 0.75; }
-
-  .evidence-foot {
-    margin-top: 14px;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-
-  /* ---------- Sections ---------- */
-
-  section { padding: 56px 0; border-bottom: 1px solid var(--panel-border); }
-  section:last-of-type { border-bottom: none; }
-
-  h2 {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-
-  p { max-width: 62ch; }
-  p + p { margin-top: 14px; }
-
-  .muted { color: var(--muted); }
-
-  /* ---------- Projects ---------- */
-
-  .project { padding: 28px 0; border-top: 1px solid var(--panel-border); }
-  .project:first-child { border-top: none; padding-top: 0; }
-
-  .project-head {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-
-  .project-name {
-    font-family: var(--serif);
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-right: 4px;
-  }
-
-  .project-when {
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
-
-  .project-desc { color: var(--text); margin-bottom: 12px; }
-
-  .project-stack {
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
-
-  .project-links a {
-    font-size: 0.88rem;
-    text-decoration: underline;
-    text-decoration-color: var(--panel-border);
-    text-underline-offset: 3px;
-    margin-right: 18px;
-  }
-  .project-links a:hover { text-decoration-color: var(--accent); }
-
-  /* ---------- Skills ---------- */
-
-  .skill-row { display: flex; gap: 16px; padding: 10px 0; border-top: 1px solid var(--panel-border); }
-  .skill-row:first-child { border-top: none; }
-  .skill-label { width: 130px; flex-shrink: 0; color: var(--muted); font-size: 0.88rem; }
-  .skill-items { font-size: 0.95rem; }
-
-  /* ---------- Timeline ---------- */
-
-  .tl-item { display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid var(--panel-border); }
-  .tl-item:first-child { border-top: none; padding-top: 0; }
-  .tl-when { width: 100px; flex-shrink: 0; font-family: var(--mono); font-size: 0.78rem; color: var(--muted); padding-top: 3px; }
-  .tl-role { font-weight: 600; margin-bottom: 2px; }
-  .tl-org { color: var(--muted); font-size: 0.9rem; margin-bottom: 6px; }
-  .tl-desc { font-size: 0.92rem; color: var(--text); }
-
-  /* ---------- Contact ---------- */
-
-  .contact-links { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
-  .contact-links a {
-    font-size: 0.98rem;
-    padding: 12px 16px;
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: 4px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    transition: border-color 0.15s ease;
-  }
-  .contact-links a:hover { border-color: var(--accent); }
-  .contact-links span.k { color: var(--muted); font-family: var(--mono); font-size: 0.82rem; }
-
-  footer {
-    padding: 40px 0 60px;
-    color: var(--muted);
-    font-size: 0.85rem;
-  }
-</style>
-</head>
-<body>
-
-<div class="wrap">
-
-  <section class="hero">
-    <h1 class="hero-name">Kartikya Motwani</h1>
-    <p class="hero-role">Full-stack AI developer and cybersecurity student, currently building a statistically-validated trading platform and a RAG-based book intelligence system.</p>
-
-    <div class="evidence">
-      <div class="evidence-lead">Four trading strategies, tested with equal statistical rigor across 15 NSE large-cap stocks over 5 years:</div>
-      <div class="evidence-row">
-        <span class="evidence-strategy">mean_reversion</span>
-        <span class="evidence-p">p = 0.0008</span>
-        <span class="evidence-verdict pass">significant</span>
-      </div>
-      <div class="evidence-row">
-        <span class="evidence-strategy">trend_following</span>
-        <span class="evidence-p">p = 0.63</span>
-        <span class="evidence-verdict fail">not significant</span>
-      </div>
-      <div class="evidence-row">
-        <span class="evidence-strategy">breakout</span>
-        <span class="evidence-p">p = 0.66</span>
-        <span class="evidence-verdict fail">not significant</span>
-      </div>
-      <div class="evidence-row">
-        <span class="evidence-strategy">volume_confirmed</span>
-        <span class="evidence-p">p = 0.59</span>
-        <span class="evidence-verdict fail">not significant</span>
-      </div>
-      <div class="evidence-foot">Only one survived — later re-validated at p = 0.0344 across an expanded 43-stock watchlist. Reported honestly rather than hidden.</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>About</h2>
-    <p>Second-year CSE student at Bennett University (9.0 SGPA, merit scholarship), specializing in cybersecurity. I work across three tracks in parallel: full-stack AI development, cybersecurity certification, and freelance engineering.</p>
-    <p class="muted">Based in Greater Noida, India.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <div class="project-head">
-        <span class="project-name">Alpha Terminal</span>
-        <span class="project-when">2026 — ongoing</span>
-      </div>
-      <p class="project-desc">A full-stack algorithmic trading platform for NSE equities. Real trading costs (brokerage, STT, GST, stamp duty), near-real-time prices via Angel One SmartAPI, multi-user isolated paper-trading accounts, and every strategy pooled-tested for statistical significance before being trusted — three of four were honestly rejected rather than cherry-picked.</p>
-      <div class="project-stack">Python · FastAPI · PostgreSQL (Neon) · React · SQLAlchemy · JWT</div>
-      <div class="project-links">
-        <a href="https://github.com/Kartik-061/trading-bot" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://strat-guardian-ui.lovable.app" target="_blank" rel="noopener">Live app</a>
-        <a href="https://github.com/Kartik-061/trading-bot/wiki" target="_blank" rel="noopener">Methodology</a>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="project-head">
-        <span class="project-name">BookIQ</span>
-        <span class="project-when">Apr – May 2026</span>
-      </div>
-      <p class="project-desc">A RAG-based book intelligence platform, built end-to-end in 48 hours. Semantic search across 588+ books via ChromaDB vector embeddings, with Gemini-powered question answering. Retrieval accuracy evaluated at MRR@3 = 1.000 against a default-configuration baseline.</p>
-      <div class="project-stack">Python · Django REST · React · ChromaDB · Gemini AI · Docker</div>
-      <div class="project-links">
-        <a href="https://github.com/Kartik-061/book-intelligence-platform" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://book-intelligence-platform-production.up.railway.app" target="_blank" rel="noopener">Live app</a>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="project-head">
-        <span class="project-name">B2B University Lead Database</span>
-        <span class="project-when">Mar – Apr 2026</span>
-      </div>
-      <p class="project-desc">Built a verified contact database of 4,000+ decision-makers across 3,500+ US universities for Good Dopamine Technologies, cross-referencing official pages to handle role rotation, and automated the full dedup-and-merge pipeline.</p>
-      <div class="project-stack">Python · openpyxl · Pandas · NeverBounce</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <div class="skill-row">
-      <div class="skill-label">Languages</div>
-      <div class="skill-items">Python, Java, C++, JavaScript</div>
-    </div>
-    <div class="skill-row">
-      <div class="skill-label">Backend</div>
-      <div class="skill-items">FastAPI, Django REST, Flask, SQLAlchemy, PostgreSQL</div>
-    </div>
-    <div class="skill-row">
-      <div class="skill-label">Frontend</div>
-      <div class="skill-items">React, Tailwind CSS</div>
-    </div>
-    <div class="skill-row">
-      <div class="skill-label">AI / Data</div>
-      <div class="skill-items">RAG pipelines, ChromaDB, Gemini API, statistical significance testing</div>
-    </div>
-    <div class="skill-row">
-      <div class="skill-label">Cybersecurity</div>
-      <div class="skill-items">Network security, ethical hacking fundamentals, TryHackMe Pre-Security</div>
-    </div>
-    <div class="skill-row">
-      <div class="skill-label">Tools</div>
-      <div class="skill-items">Git, Docker, Linux, Postman</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <div class="tl-item">
-      <div class="tl-when">Apr – May 2026</div>
-      <div>
-        <div class="tl-role">Full-Stack AI Developer (Project)</div>
-        <div class="tl-org">Ergosphere Solutions</div>
-        <div class="tl-desc">Built BookIQ end-to-end; completed 19/19 assigned tasks including auth, RAG pipeline, and Docker deployment.</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-when">Mar – Apr 2026</div>
-      <div>
-        <div class="tl-role">Python Developer Intern</div>
-        <div class="tl-org">Good Dopamine Technologies</div>
-        <div class="tl-desc">Built and automated a verified B2B contact database pipeline across thousands of institutions.</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-when">Jan – Apr 2026</div>
-      <div>
-        <div class="tl-role">Cyber Security Intern</div>
-        <div class="tl-org">Bleep Education LLP × E-Cell IIT Bombay</div>
-        <div class="tl-desc">Completed a 4-month program covering network security, ethical hacking, and information security.</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-when">Nov 2025 —</div>
-      <div>
-        <div class="tl-role">Freelance Python Developer</div>
-        <div class="tl-org">Fiverr &amp; Upwork</div>
-        <div class="tl-desc">Browser automation, web scraping, and AI integration for clients.</div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <p><strong>B.Tech, Computer Science &amp; Engineering</strong> (Cybersecurity Specialization)<br>
-    <span class="muted">Bennett University, Greater Noida · 2025–2029 · SGPA 9.0 · Merit Scholarship</span></p>
-  </section>
-
-  <section>
-    <h2>Get in touch</h2>
-    <p class="muted">Open to internships, freelance projects, and collaboration.</p>
-    <div class="contact-links">
-      <a href="mailto:krishkarthikyamotwani@gmail.com">Email <span class="k">krishkarthikyamotwani@gmail.com</span></a>
-      <a href="https://linkedin.com/in/kartikya-m-dev" target="_blank" rel="noopener">LinkedIn <span class="k">/in/kartikya-m-dev</span></a>
-      <a href="https://github.com/Kartik-061" target="_blank" rel="noopener">GitHub <span class="k">/Kartik-061</span></a>
-      <a href="https://fiverr.com/kartikyamotwani" target="_blank" rel="noopener">Fiverr <span class="k">/kartikyamotwani</span></a>
-      <a href="./Kartikya_Motwani_Resume.pdf" target="_blank" rel="noopener">Resume <span class="k">PDF ↓</span></a>
-    </div>
-  </section>
-
-  <footer>
-    Built by Kartikya Motwani.
-  </footer>
-
-</div>
-
-</body>
-</html>
+:root{--bg:#12113a;--panel:#1b1a4d;--line:#3a386c;--tx:#f4f3ff;--mu:#9a97c8;--am:#f5a524}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,sans-serif;padding:20px;max-width:980px;margin-inline:auto}
+h1{font-size:22px;margin:0}h1 span{color:var(--am)}.sub{color:var(--mu);margin:2px 0 18px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+.k{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}.k b{display:block;font-size:20px}.k small{color:var(--mu)}
+#chart{height:300px;background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:6px}
+.leg{color:var(--mu);font-size:13px;margin-bottom:16px}.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 10px}
+h2{font-size:15px;color:var(--am);margin:18px 0 6px;letter-spacing:.04em;text-transform:uppercase}
+.wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:480px}th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right}
+th:first-child,td:first-child{text-align:left}th{color:var(--mu);font-weight:500}
+.pos{color:#4ade80}.neg{color:#fb7185}.note{color:var(--mu);font-size:13px;margin-top:22px}
+</style></head><body>
+<h1>Forge <span>Terminal</span></h1>
+<p class="sub">Nifty Midcap 150 momentum, monthly rotation. Paper trading, not investment advice. <span id="asof"></span></p>
+<div class="kpis" id="kpis"></div>
+<div id="chart"></div>
+<div class="leg"><i style="background:#f5a524"></i>Forge (rebased to 100)<i style="background:#9a97c8"></i>Midcap 150 price index</div>
+<h2>Holdings</h2><div class="wrap"><table id="hold"></table></div>
+<h2>Last rotation</h2><p id="rot"></p>
+<p class="note">Live paper record started 2026-10-06. The 27.85% net CAGR is a hypothetical backtest, not a live return. A few weeks of data cannot show skill; reviews are scheduled at 12 and 24 months. Updated weekly from backup files.</p>
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+<script>
+const pct=v=>(v>0?'+':'')+v.toFixed(2)+'%',cls=v=>v>=0?'pos':'neg';
+fetch('status.json').then(r=>r.json()).then(d=>{
+ const s=d.summary;
+ document.getElementById('asof').textContent='As of '+s.asof+' (generated '+d.generated+').';
+ document.getElementById('kpis').innerHTML=[
+  ['NAV','₹'+s.nav.toLocaleString('en-IN'),''],['Since start',pct(s.ret),cls(s.ret)],
+  ['Midcap 150',pct(s.bench_ret),cls(s.bench_ret)],['Gap vs index',pct(s.gap).replace('%',' pts'),cls(s.gap)],
+  ['Max drawdown',s.max_dd.toFixed(2)+'%','neg'],['Next rotation',d.next_rotation,'']
+ ].map(k=>`<div class="k"><small>${k[0]}</small><b class="${k[2]}">${k[1]}</b></div>`).join('');
+ const ch=LightweightCharts.createChart(document.getElementById('chart'),{autoSize:true,
+  layout:{background:{color:'transparent'},textColor:'#c9c7f0'},grid:{vertLines:{color:'#2b2a5e'},horzLines:{color:'#2b2a5e'}},
+  rightPriceScale:{borderVisible:false},timeScale:{borderVisible:false}});
+ const a=ch.addLineSeries({color:'#f5a524',lineWidth:2}),b=ch.addLineSeries({color:'#9a97c8',lineWidth:2});
+ a.setData(d.series.map(p=>({time:p.t,value:p.nav})));b.setData(d.series.map(p=>({time:p.t,value:p.bench})));
+ ch.timeScale().fitContent();
+ document.getElementById('hold').innerHTML='<tr><th>Symbol</th><th>Qty</th><th>Entry price</th><th>Entry date</th><th>Entry value</th></tr>'+
+  d.holdings.map(h=>`<tr><td>${h.symbol}</td><td>${h.qty}</td><td>${h.entry_price??'-'}</td><td>${h.entry_date??'-'}</td><td>${h.entry_value?.toLocaleString('en-IN')??'-'}</td></tr>`).join('');
+ const r=d.last_rotation;
+ document.getElementById('rot').innerHTML=r.date?`<b>${r.date}</b>: sold ${r.sells.join(', ')}; bought ${r.buys.join(', ')}.`:'No rotation recorded yet.';
+});
+</script></body></html>
