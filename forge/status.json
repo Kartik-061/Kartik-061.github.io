@@ -1,0 +1,343 @@
+{
+ "generated": "2026-11-04 11:39",
+ "summary": {
+  "start": "2026-10-06",
+  "asof": "2026-11-03",
+  "nav": 96350.15,
+  "ret": -3.26,
+  "bench_ret": -2.08,
+  "gap": -1.19,
+  "max_dd": -8.26
+ },
+ "series": [
+  {
+   "t": "2026-10-06",
+   "nav": 100.0,
+   "bench": 100.0
+  },
+  {
+   "t": "2026-10-09",
+   "nav": 98.184,
+   "bench": 98.288
+  },
+  {
+   "t": "2026-10-12",
+   "nav": 98.429,
+   "bench": 98.154
+  },
+  {
+   "t": "2026-10-13",
+   "nav": 99.049,
+   "bench": 99.184
+  },
+  {
+   "t": "2026-10-14",
+   "nav": 98.752,
+   "bench": 99.206
+  },
+  {
+   "t": "2026-10-15",
+   "nav": 97.921,
+   "bench": 98.871
+  },
+  {
+   "t": "2026-10-16",
+   "nav": 97.511,
+   "bench": 98.82
+  },
+  {
+   "t": "2026-10-19",
+   "nav": 96.207,
+   "bench": 97.667
+  },
+  {
+   "t": "2026-10-20",
+   "nav": 96.335,
+   "bench": 97.815
+  },
+  {
+   "t": "2026-10-21",
+   "nav": 94.533,
+   "bench": 96.237
+  },
+  {
+   "t": "2026-10-22",
+   "nav": 93.654,
+   "bench": 95.582
+  },
+  {
+   "t": "2026-10-23",
+   "nav": 91.744,
+   "bench": 93.509
+  },
+  {
+   "t": "2026-10-26",
+   "nav": 92.901,
+   "bench": 94.498
+  },
+  {
+   "t": "2026-10-27",
+   "nav": 94.445,
+   "bench": 95.558
+  },
+  {
+   "t": "2026-10-28",
+   "nav": 94.781,
+   "bench": 95.839
+  },
+  {
+   "t": "2026-10-29",
+   "nav": 96.006,
+   "bench": 96.66
+  },
+  {
+   "t": "2026-10-30",
+   "nav": 95.152,
+   "bench": 95.76
+  },
+  {
+   "t": "2026-11-02",
+   "nav": 95.676,
+   "bench": 96.958
+  },
+  {
+   "t": "2026-11-03",
+   "nav": 96.739,
+   "bench": 97.925
+  }
+ ],
+ "holdings": [
+  {
+   "symbol": "ABCAPITAL",
+   "qty": 8.782,
+   "entry_price": 378.05,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "AJANTPHARM",
+   "qty": 0.93,
+   "entry_price": 3571.7,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "ANTHEM",
+   "qty": 3.711,
+   "entry_price": 894.65,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "APARINDS",
+   "qty": 0.185,
+   "entry_price": 17941.0,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "APLAPOLLO",
+   "qty": 1.55,
+   "entry_price": 2141.8,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "AUROPHARMA",
+   "qty": 1.969,
+   "entry_price": 1686.0,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "BHARATFORG",
+   "qty": 1.772,
+   "entry_price": 1874.0,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "BHEL",
+   "qty": 7.353,
+   "entry_price": 451.5,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "COFORGE",
+   "qty": 1.801,
+   "entry_price": 1843.0,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "FEDERALBNK",
+   "qty": 10.376,
+   "entry_price": 319.95,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "FLUOROCHEM",
+   "qty": 0.722,
+   "entry_price": 4599.0,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "GLENMARK",
+   "qty": 1.247,
+   "entry_price": 2310.0,
+   "entry_date": "2026-10-30",
+   "entry_value": 2879.45
+  },
+  {
+   "symbol": "GVT&D",
+   "qty": 0.776,
+   "entry_price": 4278.5,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "INDHOTEL",
+   "qty": 3.532,
+   "entry_price": 815.35,
+   "entry_date": "2026-10-30",
+   "entry_value": 2879.45
+  },
+  {
+   "symbol": "IPCALAB",
+   "qty": 1.706,
+   "entry_price": 1946.3,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "JSWINFRA",
+   "qty": 9.145,
+   "entry_price": 363.05,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "KPRMILL",
+   "qty": 2.59,
+   "entry_price": 1111.9,
+   "entry_date": "2026-10-30",
+   "entry_value": 2879.45
+  },
+  {
+   "symbol": "LAURUSLABS",
+   "qty": 1.618,
+   "entry_price": 2051.8,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "LLOYDSME",
+   "qty": 1.785,
+   "entry_price": 1860.0,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "LTTS",
+   "qty": 0.672,
+   "entry_price": 4283.7,
+   "entry_date": "2026-10-30",
+   "entry_value": 2879.45
+  },
+  {
+   "symbol": "MAHABANK",
+   "qty": 41.241,
+   "entry_price": 80.5,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "MANKIND",
+   "qty": 1.161,
+   "entry_price": 2481.0,
+   "entry_date": "2026-10-30",
+   "entry_value": 2879.45
+  },
+  {
+   "symbol": "MARICO",
+   "qty": 3.581,
+   "entry_price": 804.0,
+   "entry_date": "2026-10-30",
+   "entry_value": 2879.45
+  },
+  {
+   "symbol": "MCX",
+   "qty": 1.001,
+   "entry_price": 3316.0,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "NYKAA",
+   "qty": 9.799,
+   "entry_price": 338.8,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "OFSS",
+   "qty": 0.316,
+   "entry_price": 10501.0,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "PAYTM",
+   "qty": 1.967,
+   "entry_price": 1688.2,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "PERSISTENT",
+   "qty": 0.478,
+   "entry_price": 6019.0,
+   "entry_date": "2026-10-30",
+   "entry_value": 2879.45
+  },
+  {
+   "symbol": "PHOENIXLTD",
+   "qty": 1.774,
+   "entry_price": 1871.2,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  },
+  {
+   "symbol": "RADICO",
+   "qty": 0.743,
+   "entry_price": 4471.1,
+   "entry_date": "2026-10-06",
+   "entry_value": 3319.92
+  }
+ ],
+ "last_rotation": {
+  "date": "2026-10-30",
+  "sells": [
+   "INDUSINDBK",
+   "HINDCOPPER",
+   "NAM-INDIA",
+   "MOTILALOFS",
+   "IDFCFIRSTB",
+   "AUBANK",
+   "LODHA"
+  ],
+  "buys": [
+   "GLENMARK",
+   "MARICO",
+   "MANKIND",
+   "LTTS",
+   "PERSISTENT",
+   "INDHOTEL",
+   "KPRMILL"
+  ]
+ },
+ "next_rotation": "2026-11-30"
+}
